@@ -1,0 +1,20 @@
+import pandas as pd 
+
+my_list = pd.Series([10, 20, 30, None, 50], index = ['a', 'b', 'c', 'd', 'e'], name='MyNumbers')
+
+def display_series_info(series):
+    print("Series Name:", series.name)
+    print("Series Index:", series.index.tolist())
+    print("Series Values:", series.values.tolist())
+    print("Series Description:\n", series.describe())
+
+my_list2 = pd.Series([10, 20, 30, None, 50], name='MyNumbers-without-index')
+print("Series without custom index:", my_list2)
+
+
+"""print(my_list)
+print(my_list['c'])"""
+
+if __name__ == "__main__":
+    display_series_info(my_list)
+    
